@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace loop
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            int MONEY;
+            int change;
+            int price = 350, price1 = 545;
+            string buy;
+
+            do
+            {
+                Console.WriteLine("flowers you want to buy");
+                Console.WriteLine("\nThe beauty and diversity of colorful flowers, scents and textures, and intriguing scientific properties can feel like a world beyond our own.");
+                Console.WriteLine("\n1. sunflowers - P 350 \n2. italian aster - P 545");
+                Console.Write("\nYOU CHOSEN FLOWERS: ");
+                choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("\na tall North American plant of the daisy family, with very large golden-rayed flowers. Sunflowers are cultivated for their edible seeds, which are an important source of oil for cooking and margarine");
+                        Console.WriteLine("\nSUNFLOWERS");
+                        Console.WriteLine("PRICE: 350");
+                        Console.Write("\nMONEY: ");
+                        MONEY = Convert.ToInt32(Console.ReadLine());
+
+                        change = MONEY - price;
+
+                        Console.WriteLine("CHANGE: {0:n2}", change);
+                        Console.WriteLine("THANK YOU FOR BUYING!");
+                        Console.ReadLine();
+                        break;
+
+                    case 2:
+                        Console.WriteLine(" Aster amellus, commonly known as Italian Aster or the European Michaelmas-daisy, is a perennial flowering plant that belongs to the Asteraceae family.");
+                        Console.WriteLine("\nITALIAN ASTER");
+                        Console.WriteLine("PRICE: 545");
+                        Console.Write("\nMONEY: ");
+                        MONEY = Convert.ToInt32(Console.ReadLine());
+
+                        change = MONEY - price1;
+
+                        Console.WriteLine("CHANGE: {0:n2}", change);
+                        Console.WriteLine("THANK YOU FOR BUYING!");
+                        Console.ReadLine();
+                        break;
+
+                    default:
+                        Console.WriteLine("\nTHANK YOU FOR VISITING OUR FLOWERS WEBSHOP!");
+                        Console.ReadLine();
+                        break;
+
+                }
+                Console.WriteLine("\nDO YOU WANT TO BUY AGAIN? (yes/no): ");
+                buy = Convert.ToString(Console.ReadLine());
+                if (buy == "yes")
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("OKAY!THANK YOU AGAIN!");
+                    Console.ReadLine();
+                }
+            }
+            while (false);
+        }
+    }
+}
